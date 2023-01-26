@@ -18,9 +18,13 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
-  
-- task: SFDX@0
+    
+- script: |
+    echo blah blah blah
+- task: Bash@3
   inputs:
-    username: 'adfakslj@asdklfj.com'
-    password: 'asdfds'
-    url: 'https://test.salesforce.com/'
+    targetType: 'inline'
+    script: |
+      # Write your commands here
+      
+      echo 'Hello world'
